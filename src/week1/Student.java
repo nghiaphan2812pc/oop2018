@@ -31,7 +31,8 @@ public class Student {
         // TODO:
     }
 
-    String getInfo() {
+
+        String getInfo() {
         // TODO:
         return null; // xóa dòng này sau khi cài đặt
     }
