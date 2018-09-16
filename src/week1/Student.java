@@ -29,6 +29,7 @@ public class Student {
      */
     Student(Student s) {
         // TODO:
+        int a = 1;
     }
 
 
