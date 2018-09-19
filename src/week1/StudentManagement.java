@@ -8,14 +8,51 @@ public class StudentManagement {
         // TODO:
         return s1.getGroup() == s2.getGroup();
     }
-
+    public void cong(Student sv)
+    {
+        int n=0;
+        students[n++] = sv;
+    }
     void studentsByGroup() {
         // TODO:
-
+        String [] Group= new String[100];
+        int i,j,solop=0;
+        for(i=0;i<n;i++)
+        {
+            for(j=0;j<solop;j++)
+            {
+                if(students[i].getgroup()==Group[j]) break;
+            }
+            if(j==solop)
+            {Group[solop++]=students[i].getgroup();}
+        }
+        for(j=0;j<solop;j++)
+        {
+            System.out.println("ten lop : " + Group[j]);
+            for( i=0;i<n;i++)
+            {
+                if(students[i].getgroup()==Group[j])
+                {
+                    students[i].getInfo();
+                    System.out.println(" ");
+                }
+            }
+        }
     }
 
     void removeStudent(String id) {
         // TODO:
+        for (int i=0;i<n;i++)
+        {
+            if(students[i].getid()==id)
+            {
+                for(int j=i;j<n-1;j++)
+                {
+                    students[j]=students[j+1];
+                }
+            }
+            n--;
+        }
     }
 
     public static void main(String[] args) {
