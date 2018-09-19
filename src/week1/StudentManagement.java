@@ -34,7 +34,7 @@ public class StudentManagement {
                 if(students[i].getgroup()==Group[j])
                 {
                     students[i].getInfo();
-                    System.out.println(" ");
+
                 }
             }
         }
