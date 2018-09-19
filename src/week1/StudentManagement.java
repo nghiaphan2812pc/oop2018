@@ -6,7 +6,7 @@ public class StudentManagement {
     Student[] students = new Student[100];
     public boolean sameGroup(Student s1, Student s2) {
         // TODO:
-        return s1.getGroup() == s2.getGroup();
+        return s1.getGroup().equals(s2.getGroup());
     }
     public void cong(Student sv)
     {
