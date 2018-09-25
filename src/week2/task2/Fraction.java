@@ -114,3 +114,4 @@ public class Fraction {
         else System.out.println("false");
     }
 }
+
