@@ -4,11 +4,13 @@ public class Student {
 
     // TODO: khai báo các thuộc tính cho Student
     private String name, id, group, email;
+
     // TODO: khai báo các phương thức getter, setter cho Student
-    public String getName(){
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -51,6 +53,7 @@ public class Student {
 
     /**
      * Constructor 2
+     *
      * @param n
      * @param sid
      * @param em
@@ -65,6 +68,7 @@ public class Student {
 
     /**
      * Constructor 3
+     *
      * @param
      */
     Student(Student s) {
@@ -75,11 +79,4 @@ public class Student {
         email = s.getEmail();
     }
 
-    String getInfo() {
-        // TODO:in ra
-        System.out.println(name);
-        System.out.println(id);
-        System.out.println(group);
-        System.out.println(email);
-        //return null; // xóa dòng này sau khi cài đặt
-    }
+}
