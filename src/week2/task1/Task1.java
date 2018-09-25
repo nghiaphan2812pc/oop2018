@@ -19,9 +19,8 @@ public class Task1 {
         }
         return a;
     }
-    }
 
-    public static int fibonacci(int n)
+    public static int fibonacci(int n )
     {
         int a0 = 0;
         int a1 = 1;
@@ -38,6 +37,11 @@ public class Task1 {
             }
         }
         return an;
-        System.out.print(an);
     }
+    public static void main(String ard[])
+    {
+        //System.out.println(gcd(-100,94));
+        //	System.out.println(fibonacci(12));
+    }
+
 }
