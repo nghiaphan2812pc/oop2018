@@ -70,3 +70,4 @@ public class Fraction {
         Fraction n = (Fraction) obj ;
         return num*n.den == den*n.num ;
     }
+}
