@@ -38,7 +38,7 @@ public class Task1 {
         }
         return an;
     }
-    public static void main(String ard[])
+    public static void main(String args[])
     {
         //System.out.println(gcd(-100,94));
         //	System.out.println(fibonacci(12));
