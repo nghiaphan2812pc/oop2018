@@ -1,5 +1,6 @@
 package week2.task2;
 
+import jdk.internal.org.objectweb.asm.tree.FrameNode;
 
 public class Fraction {
 
@@ -34,7 +35,6 @@ public class Fraction {
         Fraction phanso = new Fraction(0,0);
         phanso.num=((this.getNum()*other.getDen()) + (other.getNum()*this.getDen()));
         phanso.den=this.getDen()*other.getDen();
-        System.out.println(phanso.num + "/" + phanso.den);
         return phanso;
     }
 
@@ -42,10 +42,10 @@ public class Fraction {
     {
         // TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction mới
         Fraction phanso = new Fraction(0,0);
-        phanso.num=((other.getNum()*this.getDen())-(other.getDen()*this.getNum()));
+        phanso.num=((this.getNum()*other.getDen())-(this.getDen()*other.getNum()));
         phanso.den=(other.den*this.den);
         if(phanso.den<0) phanso.den=-phanso.den;
-        System.out.println(phanso.num + "/" + phanso.den);
+
         return phanso;
     }
 
@@ -54,23 +54,19 @@ public class Fraction {
         // TODO: Phương thức nhân hai phân số (this và other), trả về đối tượng Fraction mới
         phanso.num=(other.num*num);
         phanso.den=(other.den*den);
-        System.out.println(phanso.num + "/" + phanso.den);
+
         return phanso;
     }
 
     public Fraction divide(Fraction other) {
         Fraction phanso = new Fraction(0,0);
         // TODO: Phương thức chia hai phân số (this và other), trả về đối tượng Fraction mới
-        phanso.num=(other.num*den);
-        phanso.den=(other.den*num);
-        System.out.println(phanso.num + "/" + phanso.den);
+        phanso.setNum(num*other.den);
+        phanso.setDen(den*other.num);
         return phanso;
     }
     public boolean equals ( Object obj )
     {
         Fraction n = (Fraction) obj ;
-        return num*n.den > den*n.num ;
+        return num*n.den == den*n.num ;
     }
-}
-
-
