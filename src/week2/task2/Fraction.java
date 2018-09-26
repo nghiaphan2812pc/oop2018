@@ -1,6 +1,5 @@
 package week2.task2;
 
-import jdk.internal.org.objectweb.asm.tree.FrameNode;
 
 public class Fraction {
 
@@ -30,29 +29,6 @@ public class Fraction {
         this.num = num;
     }
 
-    public static int gcd(int a, int b)
-    {
-        // TODO: Tính ước chung lớn nhất của 2 số a, b
-
-        while (a != b)
-        {
-            if (a > b)
-            {
-                a = a - b;
-            }
-            else
-            {
-                b = b - a;
-            }
-        }
-        return a;
-    }
-    public void toigian()
-    {
-        int i = gcd(this.getNum(), this.getDen());
-        this.setNum(this.getNum() / i);
-        this.setDen(this.getDen() / i);
-    }
     public Fraction add(Fraction other) {
         // TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
         Fraction phanso = new Fraction(0,0);
@@ -94,24 +70,6 @@ public class Fraction {
     {
         Fraction n = (Fraction) obj ;
         return num*n.den > den*n.num ;
-    }
-    public static void main(String args[])
-    {
-        Fraction phanso1 = new Fraction(0,0);
-        Fraction phanso2 = new Fraction(0,0);
-        Fraction phanso3 = new Fraction(0,0);
-        if(phanso1.num!= 0 )
-        {
-            phanso1.toigian();
-        }
-        if(phanso2.num!= 0 || phanso2.den == 0 )
-        {
-            phanso2.toigian();
-        }
-        phanso3=phanso1.add(phanso2);
-        System.out.println(phanso3.num + "/" + phanso3.den);
-        if(phanso1.equals(phanso2)) System.out.println("true");
-        else System.out.println("false");
     }
 }
 
