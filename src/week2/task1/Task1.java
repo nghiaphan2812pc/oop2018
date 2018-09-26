@@ -6,18 +6,8 @@ public class Task1 {
     {
         // TODO: Tính ước chung lớn nhất của 2 số a, b
 
-        while (a != b)
-        {
-            if (a > b)
-            {
-                a = a - b;
-            }
-            else
-                {
-                b = b - a;
-                }
-        }
-        return a;
+         if (b == 0) return a;
+        return gcd(b, a % b);
     }
 
     public static int fibonacci(int n )
