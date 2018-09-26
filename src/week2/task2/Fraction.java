@@ -95,7 +95,7 @@ public class Fraction {
         Fraction n = (Fraction) obj ;
         return num*n.den > den*n.num ;
     }
-    public static void main (String args[])
+    public static void main(String args[])
     {
         Fraction phanso1 = new Fraction(0,0);
         Fraction phanso2 = new Fraction(0,0);
