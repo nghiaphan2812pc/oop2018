@@ -30,35 +30,11 @@ public class Fraction {
         this.num = num;
     }
 
-    public static int gcd(int a, int b)
-    {
-        // TODO: Tính ước chung lớn nhất của 2 số a, b
-
-        while (a != b)
-        {
-            if (a > b)
-            {
-                a = a - b;
-            }
-            else
-            {
-                b = b - a;
-            }
-        }
-        return a;
-    }
-    public void toigian()
-    {
-        int i = gcd(this.getNum(), this.getDen());
-        this.setNum(this.getNum() / i);
-        this.setDen(this.getDen() / i);
-    }
     public Fraction add(Fraction other) {
         // TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
         Fraction phanso = new Fraction(0,0);
         phanso.num=((this.getNum()*other.getDen()) + (other.getNum()*this.getDen()));
         phanso.den=this.getDen()*other.getDen();
-        System.out.println(phanso.num + "/" + phanso.den);
         return phanso;
     }
 
@@ -66,10 +42,10 @@ public class Fraction {
     {
         // TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction mới
         Fraction phanso = new Fraction(0,0);
-        phanso.num=((other.getNum()*this.getDen())-(other.getDen()*this.getNum()));
+        phanso.num=((this.getNum()*other.getDen())-(this.getDen()*other.getNum()));
         phanso.den=(other.den*this.den);
         if(phanso.den<0) phanso.den=-phanso.den;
-        System.out.println(phanso.num + "/" + phanso.den);
+
         return phanso;
     }
 
@@ -78,41 +54,20 @@ public class Fraction {
         // TODO: Phương thức nhân hai phân số (this và other), trả về đối tượng Fraction mới
         phanso.num=(other.num*num);
         phanso.den=(other.den*den);
-        System.out.println(phanso.num + "/" + phanso.den);
+
         return phanso;
     }
 
     public Fraction divide(Fraction other) {
         Fraction phanso = new Fraction(0,0);
         // TODO: Phương thức chia hai phân số (this và other), trả về đối tượng Fraction mới
-        phanso.num=(other.num*den);
-        phanso.den=(other.den*num);
-        System.out.println(phanso.num + "/" + phanso.den);
+        phanso.setNum(num*other.den);
+        phanso.setDen(den*other.num);
         return phanso;
     }
     public boolean equals ( Object obj )
     {
         Fraction n = (Fraction) obj ;
-        return num*n.den > den*n.num ;
-    }
-    public static void main (String args[])
-    {
-        Fraction phanso1 = new Fraction(0,0);
-        Fraction phanso2 = new Fraction(0,0);
-        Fraction phanso3 = new Fraction(0,0);
-        if(phanso1.num!= 0 )
-        {
-            phanso1.toigian();
-        }
-        if(phanso2.num!= 0 || phanso2.den == 0 )
-        {
-            phanso2.toigian();
-        }
-        phanso3=phanso1.add(phanso2);
-        System.out.println(phanso3.num + "/" + phanso3.den);
-        if(phanso1.equals(phanso2)) System.out.println("true");
-        else System.out.println("false");
+        return num*n.den == den*n.num ;
     }
 }
-
-
