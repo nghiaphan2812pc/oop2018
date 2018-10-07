@@ -58,26 +58,26 @@ public class Week3Test {
     @Test
     public void testbmi1()
     {
-        assertEquals("Thua can", Week3.calculateBMI(60,1.6);
+        assertEquals("Thua can", Week3.calculateBMI(60,1.6));
     }
     @Test
     public void testbmi2()
     {
-        assertEquals("Thieu can", Week3.calculateBMI(36.5,1.55);
+        assertEquals("Thieu can", Week3.calculateBMI(36.5,1.55));
     }
     @Test
-    public void testbmi()
+    public void testbmi3()
     {
-        assertEquals("Beo phi", Week3.calculateBMI(100,1.9);
+        assertEquals("Beo phi", Week3.calculateBMI(100,1.9));
     }
     @Test
-    public void testbmi()
+    public void testbmi4()
     {
-        assertEquals("Binh thuong", Week3.calculateBMI(60,1.7);
+        assertEquals("Binh thuong", Week3.calculateBMI(60,1.7));
     }
     @Test
-    public void testbmi()
+    public void testbmi5()
     {
-        assertEquals("Thua can", Week3.calculateBMI(70,1.7);
+        assertEquals("Thua can", Week3.calculateBMI(70,1.7));
     }
 }
