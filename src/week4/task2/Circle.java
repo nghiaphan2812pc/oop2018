@@ -12,6 +12,16 @@ public class Circle extends Shape {
     public Circle(String color, boolean filled) {
         super(color, filled);
     }
+    public void Circle() {
+        radius = 1.0;
+    }
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+    public Circle (double radius, String color, boolean filled) {
+        super(color, filled);
+        this.radius = radius;
+    }
 
     // TODO: khai báo các phương thức getter, setter cho Circle
 
@@ -22,18 +32,7 @@ public class Circle extends Shape {
         return radius;
     }
 
-    public void Circle() {
-        radius = 1.0;
-    }
-    public Circle(double radius) {
-        this.radius = radius;
-    }
 
-    public Circle (double radius, String color, boolean filled){
-        super(color,filled);
-        this.radius = radius;
-
-    }
     public double getArea(){
         return pi*radius*radius;
     }
