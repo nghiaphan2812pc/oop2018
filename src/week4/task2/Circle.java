@@ -5,7 +5,7 @@ public class Circle extends Shape {
     // TODO: khai báo các thuộc tính cho Circle
 
     private double radius;
-    private double pi = Math.PI;
+    private final double pi = Math.PI;
 
     // TODO: khởi tạo giá trị cho các thuộc tính của Circle
 
@@ -39,7 +39,7 @@ public class Circle extends Shape {
     public double getPerimeter(){
         return 2*pi*radius;
     }
-    @Override
+
     public String toString() {
         return "Circle{" +
                 "radius= " + radius +
