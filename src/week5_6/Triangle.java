@@ -35,7 +35,6 @@ public class Triangle extends Shape{
         this.setB(y);
         this.setC(z);
     }
-
     public void InToado() {
         System.out.println( "Triangle{" +
                 "a=" + a +

@@ -44,7 +44,6 @@ public class Layer {
             }
         }
     }
-
     public void nhap(){
         System.out.println("Nhap ten Layer :");
         name = scan.nextLine();
