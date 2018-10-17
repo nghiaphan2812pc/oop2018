@@ -1,7 +1,7 @@
 package week5_6;
 
 import java.util.Scanner;
-public class Shape {
+public class Shape  {
     protected int x;
     protected int y;
     Scanner scan = new Scanner(System.in);

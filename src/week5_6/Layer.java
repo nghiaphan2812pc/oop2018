@@ -2,22 +2,23 @@ package week5_6;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Layer {
+public class Layer extends Diagram {
     private String name;
     private String color;
-    private boolean descendile;
+    private boolean descendible;
 
     ArrayList<Shape> layer = new ArrayList<>();
     Scanner scan = new Scanner(System.in);
+
     public void nhapLayer(){
         System.out.println("nhap so phan tu cua layer");
         int n = scan.nextInt();
+        for(int i =0;i<n;i++){
         System.out.println("menu:");
         System.out.println("nhap 0 neu muon them Circle");
         System.out.println("nhap 1 neu muon them Rectangle");
         System.out.println("nhap 2 neu muon them Square");
         System.out.println("nhap 3 neu muon them Triangle");
-        for(int i =0;i<n;i++){
             int a = scan.nextInt();
             switch(a){
                 case 0:
@@ -48,7 +49,7 @@ public class Layer {
         System.out.println("Nhap ten Layer :");
         name = scan.nextLine();
         System.out.println("Nhap co the di chuyen hay ko:");
-        descendile = scan.nextBoolean();
+        descendible = scan.nextBoolean();
     }
     public void in(){
         System.out.println("NameLayer : " + getName());
@@ -56,6 +57,7 @@ public class Layer {
             layer.get(i).InToado();
         }
     }
+
 
     public void setName(String name) {
         this.name = name;
@@ -65,8 +67,8 @@ public class Layer {
         this.color = color;
     }
 
-    public void setDescendile(boolean descendile) {
-        this.descendile = descendile;
+    public void setDescendible(boolean descendible) {
+        this.descendible = descendible;
     }
 
     public void setLayer(ArrayList<Shape> layer) {
@@ -81,8 +83,8 @@ public class Layer {
         return name;
     }
 
-    public boolean isDescendile() {
-        return descendile;
+    public boolean isDescendible() {
+        return descendible;
     }
 
     public ArrayList<Shape> getLayer() {

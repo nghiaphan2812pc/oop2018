@@ -2,11 +2,15 @@ package week5_6;
 import java.util.ArrayList;
 public class Diagram {
     private Layer layer;
-    public Diagram(Layer layer){
+    public void Diagram(Layer layer){
         this.layer = layer;
     }
 
     ArrayList<Layer> layers = new ArrayList<>();
+
+    public Diagram() {
+        this.layers = new ArrayList<>();
+    }
 
 
     public void removeCircleInLayer(){
@@ -16,10 +20,9 @@ public class Diagram {
         }
     }
 
-    public void input(int n){
+    public void themlayer(int n){
         for(int i =0;i<n;i++){
             Layer layer = new Layer();
-            layer.nhap();
             layers.add(layer);
         }
     }
